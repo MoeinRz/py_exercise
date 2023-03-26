@@ -1,0 +1,29 @@
+//===========================================================================//
+//Counting Number of the Words                                               //
+//===========================================================================//
+static size_t	ft_nb_w(char const *s, char c)
+{
+	size_t	i;
+	size_t	nb_words;
+
+	if (!s[0])
+		return (0);
+	i = 0;
+	nb_words = 0;
+	while (s[i] && s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			nb_words++;
+			while (s[i] && s[i] == c)
+				i++;
+			continue ;
+		}
+		i++;
+	}
+	if (s[i - 1] != c)
+		nb_words++;
+	return (nb_words);
+}
