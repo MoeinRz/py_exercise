@@ -23,22 +23,19 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-# url = input('Enter - ')
-url = 'https://py4e-data.dr-chuck.net/known_by_Fikret.html'
-html = urlopen(url, context=ctx).read()
-soup = BeautifulSoup(html, "html.parser")
-
-# Retrieve all of the anchor tags
-tags = soup('a')
-count = 0
-sum = 0
-for tag in tags:
-    # Look at the parts of a tag
-    print('TAG:', tag)
+url = input('Enter URL:')
+# url = 'https://py4e-data.dr-chuck.net/known_by_Fikret.html'
+repeat = int(input('Enter count:'))
+pos = int(input ('Enter position:'))
+pos = pos - 1
+for i in range(repeat):
+    html = urlopen(url, context=ctx).read()
+    soup = BeautifulSoup(html, "html.parser")
+    tags = soup('a')
+    # print('TAG:', tag)
+    url = tags[pos].get('href')
+    name = tags[pos].contents[0]
     # print('URL:', tag.get('href', None))
-    count += 1
-    # sum += int(tag.contents[0])
-    # print('Contents:', tag.contents[0])
-    # print('Attrs:', tag.attrs)
-# print(f"Count {count}")
-# print(f"Sum {sum}")
+    # print('TAG:', tag)
+print(name)
+
