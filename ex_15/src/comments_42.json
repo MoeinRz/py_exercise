@@ -1,0 +1,66 @@
+{
+  "results": [
+      {
+          "address_components": [
+              {
+                  "long_name": "Malayer",
+                  "short_name": "Malayer",
+                  "types": [
+                      "locality",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "Hamadan Province",
+                  "short_name": "Hamadan Province",
+                  "types": [
+                      "administrative_area_level_1",
+                      "political"
+                  ]
+              },
+              {
+                  "long_name": "Iran",
+                  "short_name": "IR",
+                  "types": [
+                      "country",
+                      "political"
+                  ]
+              }
+          ],
+          "formatted_address": "Malayer, Hamadan Province, Iran",
+          "geometry": {
+              "bounds": {
+                  "northeast": {
+                      "lat": 34.331666,
+                      "lng": 48.8514821
+                  },
+                  "southwest": {
+                      "lat": 34.2720031,
+                      "lng": 48.7836288
+                  }
+              },
+              "location": {
+                  "lat": 34.3031914,
+                  "lng": 48.8139903
+              },
+              "location_type": "APPROXIMATE",
+              "viewport": {
+                  "northeast": {
+                      "lat": 34.331666,
+                      "lng": 48.8514821
+                  },
+                  "southwest": {
+                      "lat": 34.2720031,
+                      "lng": 48.7836288
+                  }
+              }
+          },
+          "place_id": "ChIJy6P3ez_c7T8Ro7Y1_yM5_bk",
+          "types": [
+              "locality",
+              "political"
+          ]
+      }
+  ],
+  "status": "OK"
+}
